@@ -188,24 +188,23 @@ function initScrollAnimations() {
     });
 }
 
-// === CONTACT FORM ===
+// === CONTACT FORM - GMAIL & WHATSAPP ===
 function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
     
-    // FormSubmit handles the actual sending
-    // We just add client-side validation and UX improvements
-    
     form.addEventListener('submit', function(e) {
-        // Get values
+        e.preventDefault();
+        
+        // Get form values
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
         const subject = document.getElementById('subject').value.trim();
         const message = document.getElementById('message').value.trim();
         
         // Validate required fields
         if (!name || !email || !subject || !message) {
-            e.preventDefault();
             showNotification('Please fill in all required fields', 'error');
             return false;
         }
@@ -213,7 +212,6 @@ function initContactForm() {
         // Validate email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            e.preventDefault();
             showNotification('Please enter a valid email address', 'error');
             return false;
         }
@@ -224,20 +222,52 @@ function initContactForm() {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        // Form will submit to FormSubmit
-        // FormSubmit will redirect to thank-you page or show success
-        showNotification('Sending your message...', 'success');
+        // WhatsApp number
+        const whatsappNumber = '94770114515'; // +94 77 011 4515
         
-        // Note: FormSubmit handles the actual submission
-        // The form will redirect after successful submission
+        // Create WhatsApp message
+        const whatsappMessage = `*New Contact from bridgp.com*%0A%0A` +
+            `*Name:* ${encodeURIComponent(name)}%0A` +
+            `*Email:* ${encodeURIComponent(email)}%0A` +
+            `*Phone:* ${encodeURIComponent(phone || 'Not provided')}%0A` +
+            `*Subject:* ${encodeURIComponent(subject)}%0A%0A` +
+            `*Message:*%0A${encodeURIComponent(message)}`;
+        
+        // Create Gmail compose link
+        const gmailSubject = `Contact Form: ${subject} - From ${name}`;
+        const gmailBody = `New contact form submission from bridgp.com%0D%0A%0D%0A` +
+            `Name: ${name}%0D%0A` +
+            `Email: ${email}%0D%0A` +
+            `Phone: ${phone || 'Not provided'}%0D%0A` +
+            `Subject: ${subject}%0D%0A%0D%0A` +
+            `Message:%0D%0A${message}%0D%0A%0D%0A` +
+            `----%0D%0ASent from bridgp.com contact form`;
+        
+        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=info@bridgp.com&su=${encodeURIComponent(gmailSubject)}&body=${gmailBody}`;
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+        
+        // Open WhatsApp
+        window.open(whatsappLink, '_blank');
+        
+        // Open Gmail compose after short delay
+        setTimeout(() => {
+            window.open(gmailLink, '_blank');
+        }, 800);
+        
+        // Show success message
+        showNotification('Opening WhatsApp and Gmail...', 'success');
+        
+        // Reset form
+        setTimeout(() => {
+            form.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 1000);
     });
     
     // Real-time validation
     const inputs = form.querySelectorAll('input, textarea');
     inputs.forEach(input => {
-        // Skip hidden fields
-        if (input.type === 'hidden' || input.name === '_honey') return;
-        
         input.addEventListener('blur', function() {
             validateInput(this);
         });
