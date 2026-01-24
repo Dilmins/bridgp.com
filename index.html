@@ -86,102 +86,110 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Services</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Comprehensive solutions combining Japanese productivity methods with modern technology</p>
+ <section id="services" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Comprehensive solutions combining Japanese productivity methods with modern technology</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Productivity Excellence</h3>
+                <p>Transform your operations with proven Japanese productivity methodologies including Kaizen, 5S, and Lean principles.</p>
+                <button class="expand-btn" onclick="toggleService(this)">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="service-details">
+                    <ul>
+                        <li>Kaizen (Continuous Improvement) implementation</li>
+                        <li>5S workplace organization systems</li>
+                        <li>Lean manufacturing and operations</li>
+                        <li>Just-In-Time (JIT) methodology</li>
+                        <li>Total Quality Management (TQM)</li>
+                        <li>Gemba walks and process optimization</li>
+                    </ul>
+                </div>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Productivity Excellence</h3>
-                    <p>Transform your operations with proven Japanese productivity methodologies including Kaizen, 5S, and Lean principles.</p>
-                    <button class="expand-btn" onclick="toggleService(this)">
-                        <span>Learn More</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li>Kaizen (Continuous Improvement) implementation</li>
-                            <li>5S workplace organization systems</li>
-                            <li>Lean manufacturing and operations</li>
-                            <li>Just-In-Time (JIT) methodology</li>
-                            <li>Total Quality Management (TQM)</li>
-                            <li>Gemba walks and process optimization</li>
-                        </ul>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-torii-gate"></i>
+                </div>
+                <h3>Japanese Techniques</h3>
+                <p>Leverage time-tested Japanese business methodologies to enhance efficiency and quality across your organization.</p>
+                <button class="expand-btn" onclick="toggleService(this)">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="service-details">
+                    <ul>
+                        <li>Poka-Yoke (error-proofing) systems</li>
+                        <li>Andon (visual management) implementation</li>
+                        <li>Heijunka (production leveling)</li>
+                        <li>Muda, Mura, Muri elimination</li>
+                        <li>Hoshin Kanri (strategy deployment)</li>
+                        <li>Japanese work culture integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Technology Integration</h3>
+                <p>Smart technology solutions that enhance efficiency, automate processes, and drive digital transformation.</p>
+                <button class="expand-btn" onclick="toggleService(this)">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="service-details">
+                    <ul>
+                        <li>Digital transformation strategy and consulting</li>
+                        <li>Process automation and workflow optimization</li>
+                        <li>IoT and smart manufacturing solutions</li>
+                        <li>Data analytics and business intelligence</li>
+                        <li>Cloud solutions and system integration</li>
+                        <li>Custom software development</li>
+                    </ul>
+                    
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="https://air-quality-monitoring.up.railway.app/" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #007bff; color: #ffffff; border-radius: 5px; text-decoration: none; font-size: 0.95rem; font-weight: bold; transition: background 0.3s; border: none; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <i class="fas fa-wind" style="margin-right: 8px;"></i> Air Quality Monitoring
+                        </a>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-torii-gate"></i>
-                    </div>
-                    <h3>Japanese Techniques</h3>
-                    <p>Leverage time-tested Japanese business methodologies to enhance efficiency and quality across your organization.</p>
-                    <button class="expand-btn" onclick="toggleService(this)">
-                        <span>Learn More</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li>Poka-Yoke (error-proofing) systems</li>
-                            <li>Andon (visual management) implementation</li>
-                            <li>Heijunka (production leveling)</li>
-                            <li>Muda, Mura, Muri elimination</li>
-                            <li>Hoshin Kanri (strategy deployment)</li>
-                            <li>Japanese work culture integration</li>
-                        </ul>
-                    </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-seedling"></i>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Technology Integration</h3>
-                    <p>Smart technology solutions that enhance efficiency, automate processes, and drive digital transformation.</p>
-                    <button class="expand-btn" onclick="toggleService(this)">
-                        <span>Learn More</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li>Digital transformation strategy and consulting</li>
-                            <li>Process automation and workflow optimization</li>
-                            <li>IoT and smart manufacturing solutions</li>
-                            <li>Data analytics and business intelligence</li>
-                            <li>Cloud solutions and system integration</li>
-                            <li>Custom software development</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h3>Sustainable Solutions</h3>
-                    <p>Environmentally conscious strategies that balance organizational performance with planetary responsibility.</p>
-                    <button class="expand-btn" onclick="toggleService(this)">
-                        <span>Learn More</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li>Mottainai philosophy (waste reduction)</li>
-                            <li>Green Kaizen initiatives</li>
-                            <li>Sustainable supply chain optimization</li>
-                            <li>Energy efficiency programs</li>
-                            <li>Carbon footprint reduction strategies</li>
-                            <li>ESG compliance and reporting</li>
-                        </ul>
-                    </div>
+                <h3>Sustainable Solutions</h3>
+                <p>Environmentally conscious strategies that balance organizational performance with planetary responsibility.</p>
+                <button class="expand-btn" onclick="toggleService(this)">
+                    <span>Learn More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="service-details">
+                    <ul>
+                        <li>Mottainai philosophy (waste reduction)</li>
+                        <li>Green Kaizen initiatives</li>
+                        <li>Sustainable supply chain optimization</li>
+                        <li>Energy efficiency programs</li>
+                        <li>Carbon footprint reduction strategies</li>
+                        <li>ESG compliance and reporting</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Why Choose Us Section -->
     <section id="why-us" class="why-us">
         <div class="container">
