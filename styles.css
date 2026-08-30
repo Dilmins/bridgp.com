@@ -784,6 +784,8 @@ section {
     font-weight: 700;
     color: #111827;
     margin: 0 0 8px;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
 }
 
 .work-preview-desc {
