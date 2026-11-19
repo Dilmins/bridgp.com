@@ -2,24 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRIDGP DYNAMICS - Productivity & Technology Solutions</title>
+    <meta name="description" content="BRIDGP DYNAMICS combines Japanese productivity methods such as Kaizen and 5S with smart technology to help organizations grow sustainably.">
+    <meta name="theme-color" content="#0a0c3b">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+    <a class="skip-link" href="#about">Skip to content</a>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <img src="images/BRIDGP ORG LOGO.jpg" alt="BRIDGP DYNAMICS">
-                <h1>BRIDGP DYNAMICS</h1>
-            </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
+            <a class="logo" href="#home" aria-label="BRIDGP DYNAMICS home">
+                <img src="images/BRIDGP ORG LOGO.png" alt="" width="22" height="30">
+                <span>BRIDGP DYNAMICS</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false">
                 <span></span>
                 <span></span>
             </button>
@@ -29,83 +33,60 @@
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#works" class="nav-link">Our Works</a></li>
                 <li><a href="#why-us" class="nav-link">Why Us</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+    <header id="home" class="hero">
+        <canvas class="hero-field" id="heroField" aria-hidden="true"></canvas>
         <div class="container hero-content">
-            <div class="hero-text">
-                <p class="tagline">Bridging People and the Planet</p>
-                <h1 class="hero-title">Bridging Productivity and Technology for Sustainable Growth</h1>
-                <p class="hero-description">We help organizations improve performance by integrating productivity excellence with smart technology solutions and proven Japanese techniques.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Contact Us</a>
-                    <a href="#services" class="btn btn-secondary">Our Services</a>
-                </div>
+            <p class="tagline">Bridging People and the Planet</p>
+            <h1 class="hero-title">Bridging Productivity and Technology for Sustainable Growth</h1>
+            <p class="hero-description">We help organizations improve performance by integrating productivity excellence with smart technology solutions and proven Japanese techniques.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+                <a href="#services" class="btn btn-ghost">Our Services</a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+    </header>
 
+    <main>
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
+        <div class="container about-grid">
+            <div class="about-lead">
                 <h2 class="section-title">About BRIDGP DYNAMICS</h2>
-                <div class="title-underline"></div>
                 <p class="section-subtitle">Founded in 2025, we're pioneering the integration of Japanese productivity methods with modern technology solutions</p>
             </div>
-            <div class="about-content">
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Our Vision</h3>
-                    <p>Bridging productivity and technology for sustainable growth.</p>
+            <dl class="about-list">
+                <div>
+                    <dt>Our Vision</dt>
+                    <dd>Bridging productivity and technology for sustainable growth.</dd>
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Our Mission</h3>
-                    <p>We help organizations improve performance by integrating productivity excellence with smart technology solutions.</p>
+                <div>
+                    <dt>Our Mission</dt>
+                    <dd>We help organizations improve performance by integrating productivity excellence with smart technology solutions.</dd>
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Our Values</h3>
-                    <p>Sustainability, innovation, and excellence drive everything we do. We believe in creating solutions that benefit both organizations and the planet, ensuring long-term success for all stakeholders.</p>
+                <div>
+                    <dt>Our Values</dt>
+                    <dd>Sustainability, innovation, and excellence drive everything we do. We believe in creating solutions that benefit both organizations and the planet, ensuring long-term success for all stakeholders.</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </section>
 
     <!-- Services Section -->
- <section id="services" class="services">
-    <div class="container">
-        <div class="section-header">
+    <section id="services" class="services">
+        <div class="container">
             <h2 class="section-title">Our Services</h2>
-            <div class="title-underline"></div>
             <p class="section-subtitle">Comprehensive solutions combining Japanese productivity methods with modern technology</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Productivity Excellence</h3>
-                <p>Transform your operations with proven Japanese productivity methodologies including Kaizen, 5S, and Lean principles.</p>
-                <button class="expand-btn" onclick="toggleService(this)">
-                    <span>Learn More</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="service-details">
+            <div class="service-list">
+                <details class="service" name="service" open>
+                    <summary>
+                        <span class="service-name">Productivity Excellence</span>
+                        <span class="service-blurb">Transform your operations with proven Japanese productivity methodologies including Kaizen, 5S, and Lean principles.</span>
+                    </summary>
                     <ul>
                         <li>Kaizen (Continuous Improvement) implementation</li>
                         <li>5S workplace organization systems</li>
@@ -114,20 +95,12 @@
                         <li>Total Quality Management (TQM)</li>
                         <li>Gemba walks and process optimization</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-torii-gate"></i>
-                </div>
-                <h3>Japanese Techniques</h3>
-                <p>Leverage time-tested Japanese business methodologies to enhance efficiency and quality across your organization.</p>
-                <button class="expand-btn" onclick="toggleService(this)">
-                    <span>Learn More</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="service-details">
+                </details>
+                <details class="service" name="service">
+                    <summary>
+                        <span class="service-name">Japanese Techniques</span>
+                        <span class="service-blurb">Leverage time-tested Japanese business methodologies to enhance efficiency and quality across your organization.</span>
+                    </summary>
                     <ul>
                         <li>Poka-Yoke (error-proofing) systems</li>
                         <li>Andon (visual management) implementation</li>
@@ -136,20 +109,12 @@
                         <li>Hoshin Kanri (strategy deployment)</li>
                         <li>Japanese work culture integration</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <h3>Technology Integration</h3>
-                <p>Smart technology solutions that enhance efficiency, automate processes, and drive digital transformation.</p>
-                <button class="expand-btn" onclick="toggleService(this)">
-                    <span>Learn More</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="service-details">
+                </details>
+                <details class="service" name="service">
+                    <summary>
+                        <span class="service-name">Technology Integration</span>
+                        <span class="service-blurb">Smart technology solutions that enhance efficiency, automate processes, and drive digital transformation.</span>
+                    </summary>
                     <ul>
                         <li>Digital transformation strategy and consulting</li>
                         <li>Process automation and workflow optimization</li>
@@ -158,20 +123,12 @@
                         <li>Cloud solutions and system integration</li>
                         <li>Custom software development</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-seedling"></i>
-                </div>
-                <h3>Sustainable Solutions</h3>
-                <p>Environmentally conscious strategies that balance organizational performance with planetary responsibility.</p>
-                <button class="expand-btn" onclick="toggleService(this)">
-                    <span>Learn More</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="service-details">
+                </details>
+                <details class="service" name="service">
+                    <summary>
+                        <span class="service-name">Sustainable Solutions</span>
+                        <span class="service-blurb">Environmentally conscious strategies that balance organizational performance with planetary responsibility.</span>
+                    </summary>
                     <ul>
                         <li>Mottainai philosophy (waste reduction)</li>
                         <li>Green Kaizen initiatives</li>
@@ -180,118 +137,67 @@
                         <li>Carbon footprint reduction strategies</li>
                         <li>ESG compliance and reporting</li>
                     </ul>
-                </div>
+                </details>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Our Works Section -->
     <section id="works" class="works">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Works</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Real systems we've built and deployed for our clients</p>
-            </div>
-            <div class="works-grid">
-                <div class="work-card">
-                    <div class="work-preview">
-                        <div class="browser-chrome">
-                            <span class="browser-dot" style="background:#ff5f57"></span>
-                            <span class="browser-dot" style="background:#febc2e"></span>
-                            <span class="browser-dot" style="background:#28c840"></span>
-                            <span class="browser-url">jasteca-auditor.vercel.app</span>
-                        </div>
-                        <div class="work-preview-body">
-                            <div class="work-preview-brand">JASTECA</div>
-                            <p class="work-preview-title">5S Audit Login</p>
-                            <p class="work-preview-desc">Sign in with your assigned auditor account. Auditors can access only their assigned site(s); senior auditors can access all sites and organizations.</p>
-                            <label class="work-preview-label">Username</label>
-                            <div class="work-preview-field work-preview-field-text"></div>
-                            <label class="work-preview-label">Password</label>
-                            <div class="work-preview-field work-preview-field-dots"></div>
-                            <div class="work-preview-btn">Sign in</div>
-                            <p class="work-preview-error">Authentication required.</p>
-                        </div>
-                    </div>
-                    <div class="work-card-body">
-                        <h3>JASTECA — 5S Monthly Audit System</h3>
-                        <p>A 5S audit platform built for multi organisational auditing purposes, with manageable auditor accounts, site-level access control and automatic Excel/Word export.</p>
-                        <a href="https://jasteca-auditor.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary">View project <i class="fas fa-arrow-up-right-from-square"></i></a>
-                    </div>
+            <h2 class="section-title">Our Works</h2>
+            <p class="section-subtitle">Real systems we've built and deployed for our clients</p>
+
+            <article class="work reveal">
+                <div class="work-shot">
+                    <img src="images/work-jasteca.png" alt="JASTECA 5S Monthly Audit sign-in screen on a phone" width="1290" height="2700" loading="lazy">
                 </div>
-                <div class="work-card">
-                    <div class="work-preview">
-                        <div class="browser-chrome">
-                            <span class="browser-dot" style="background:#ff5f57"></span>
-                            <span class="browser-dot" style="background:#febc2e"></span>
-                            <span class="browser-dot" style="background:#28c840"></span>
-                            <span class="browser-url">robotic-5s-reporter.vercel.app</span>
-                        </div>
-                        <div class="work-preview-body">
-                            <div class="work-preview-brand">ROBOTIC 5S</div>
-                            <p class="work-preview-title">5S Reporter</p>
-                            <p class="work-preview-desc">Automated 5S reporting that turns audit data into clear, consistent reports without manual effort.</p>
-                        </div>
-                    </div>
-                    <div class="work-card-body">
-                        <h3>Robotic 5S Reporter</h3>
-                        <p>Automated 5S reporting that turns audit data into clear, consistent reports without manual effort.</p>
-                        <a href="https://robotic-5s-reporter.vercel.app/" target="_blank" rel="noopener" class="btn btn-secondary">View project <i class="fas fa-arrow-up-right-from-square"></i></a>
-                    </div>
+                <div class="work-text">
+                    <h3>JASTECA — 5S Monthly Audit System</h3>
+                    <p>A 5S audit platform built for multi organisational auditing purposes, with manageable auditor accounts, site-level access control and automatic Excel/Word export.</p>
+                    <a href="https://jasteca-auditor.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">View project <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                 </div>
-            </div>
+            </article>
+
+            <article class="work work-flip reveal">
+                <div class="work-shot">
+                    <img src="images/work-reporter.png" alt="Robotic 5S Reporter home screen on a phone" width="1290" height="2790" loading="lazy">
+                </div>
+                <div class="work-text">
+                    <h3>Robotic 5S Reporter</h3>
+                    <p>Automated 5S reporting that turns audit data into clear, consistent reports without manual effort.</p>
+                    <a href="https://robotic-5s-reporter.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">View project <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                </div>
+            </article>
         </div>
     </section>
 
     <!-- Why Choose Us Section -->
     <section id="why-us" class="why-us">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose BRIDGP DYNAMICS</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="why-us-content">
-                <div class="why-us-item">
-                    <div class="why-icon">
-                        <i class="fas fa-yin-yang"></i>
-                    </div>
+            <h2 class="section-title">Why Choose BRIDGP DYNAMICS</h2>
+            <div class="why-grid">
+                <div>
                     <h3>Japanese Excellence</h3>
                     <p>Deep expertise in authentic Japanese productivity techniques including Kaizen, Lean, and continuous improvement methodologies.</p>
                 </div>
-                <div class="why-us-item">
-                    <div class="why-icon">
-                        <i class="fas fa-microchip"></i>
-                    </div>
+                <div>
                     <h3>Technology Expertise</h3>
                     <p>Cutting-edge technology solutions that seamlessly integrate with proven productivity frameworks for maximum impact.</p>
                 </div>
-                <div class="why-us-item">
-                    <div class="why-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
+                <div>
                     <h3>Tailored Approach</h3>
                     <p>Custom solutions designed specifically for your unique challenges, industry context, and organizational culture.</p>
                 </div>
-                <div class="why-us-item">
-                    <div class="why-icon">
-                        <i class="fas fa-chart-area"></i>
-                    </div>
+                <div>
                     <h3>Measurable Results</h3>
                     <p>Data-driven strategies focused on delivering tangible, quantifiable improvements to efficiency and profitability.</p>
                 </div>
-                <div class="why-us-item">
-                    <div class="why-icon">
-                        <i class="fas fa-globe-asia"></i>
-                    </div>
+                <div>
                     <h3>Sustainable Focus</h3>
                     <p>Solutions that balance organizational success with environmental and social responsibility for long-term growth.</p>
                 </div>
-                <div class="why-us-item">
-                    <div class="why-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
+                <div>
                     <h3>Innovation Driven</h3>
                     <p>Combining traditional wisdom with modern innovation to create solutions that are both proven and progressive.</p>
                 </div>
@@ -301,74 +207,64 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
+        <div class="container contact-grid">
+            <div class="contact-info">
                 <h2 class="section-title">Get In Touch</h2>
-                <div class="title-underline"></div>
                 <p class="section-subtitle">Ready to transform your organization? Let's start a conversation.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:info@bridgp.com">info@bridgp.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p><a href="tel:+94770114515">+94 77 011 4515</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>90/2, Minuwampitiya Rd<br>Walana, Panadura<br>Sri Lanka</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
+                <ul class="contact-list">
+                    <li>
+                        <span class="label">Email</span>
+                        <a href="mailto:info@bridgp.com">info@bridgp.com</a>
+                    </li>
+                    <li>
+                        <span class="label">Phone</span>
+                        <a href="tel:+94770114515">+94 77 011 4515</a>
+                    </li>
+                    <li>
+                        <span class="label">Location</span>
+                        <span>90/2, Minuwampitiya Rd<br>Walana, Panadura<br>Sri Lanka</span>
+                    </li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder=" ">
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required placeholder=" ">
-                        <label for="email">Your Email</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder=" ">
-                        <label for="phone">Phone Number (Optional)</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" required placeholder=" ">
-                        <label for="subject">Subject</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder=" " autocomplete="name">
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder=" " autocomplete="email">
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder=" " autocomplete="tel">
+                    <label for="phone">Phone Number (Optional)</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" required placeholder=" ">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section footer-brand">
+                    <img src="images/BRIDGP ORG LOGO.png" alt="" width="30" height="41">
                     <h3>BRIDGP DYNAMICS</h3>
                     <p class="footer-tagline">Bridging People and the Planet</p>
                     <p>Founded in 2025, we combine Japanese productivity excellence with modern technology for sustainable organizational growth.</p>
@@ -396,9 +292,9 @@
                 <div class="footer-section">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> info@bridgp.com</li>
-                        <li><i class="fas fa-phone"></i> +94 77 011 4515</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 90/2, Minuwampitiya Rd, Walana, Panadura</li>
+                        <li>info@bridgp.com</li>
+                        <li>+94 77 011 4515</li>
+                        <li>90/2, Minuwampitiya Rd, Walana, Panadura</li>
                     </ul>
                 </div>
             </div>
@@ -408,6 +304,7 @@
         </div>
     </footer>
 
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="script.js"></script>
 </body>
 </html>
