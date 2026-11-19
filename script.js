@@ -247,9 +247,34 @@ function initNavigation() {
     document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
 }
 
-/* ---------- Reveal ---------- */
+/* ---------- Reveal ----------
+   Words and blocks rise into place as they scroll into view, one after the
+   other within each group. */
 
 function initReveal() {
+    const groups = [
+        '.hero-content > *',
+        '.section-title, .section-subtitle',
+        '.about-list > div',
+        '.service',
+        '.work',
+        '.why-grid > div',
+        '.contact-list li, .social-links',
+        '.contact-form .form-group',
+        '.footer-section, .footer-bottom'
+    ];
+
+    groups.forEach(selector => {
+        const seen = new Map();
+        document.querySelectorAll(selector).forEach(el => {
+            el.classList.add('reveal');
+            // Stagger siblings that sit in the same parent.
+            const index = seen.get(el.parentElement) || 0;
+            seen.set(el.parentElement, index + 1);
+            el.style.setProperty('--d', `${Math.min(index, 5) * 0.09}s`);
+        });
+    });
+
     const items = document.querySelectorAll('.reveal');
     if (!('IntersectionObserver' in window)) {
         items.forEach(el => el.classList.add('in'));
@@ -261,7 +286,7 @@ function initReveal() {
             entry.target.classList.add('in');
             obs.unobserve(entry.target);
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     items.forEach(el => io.observe(el));
 }
 
